@@ -51,7 +51,7 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener {
         map.draw((Graphics2D)g);
 
         //For the border
-        g.setColor(Color.yellow);
+        g.setColor(Color.pink);
         g.fillRect(0, 0, 3, 592);
         g.fillRect(0, 0, 692, 3);
         g.fillRect(691, 0, 3, 592);
@@ -62,11 +62,11 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener {
         g.drawString(""+score, 590, 30);
 
         //For the paddle
-        g.setColor(Color.green);
+        g.setColor(Color.blue);
         g.fillRect(playerX, 550, 100, 8);
 
         //For the ball
-        g.setColor(Color.yellow);
+        g.setColor(Color.pink);
         g.fillOval(ballposX, ballposY, 20, 20);
 
         if(totalBricks <= 0) {
@@ -74,7 +74,7 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener {
             ballXdir = 0;
             ballYdir = 0;
             
-            //Game Over 
+           
             g.setColor(Color.red);
             g.setFont(new Font("serif", Font.BOLD, 30));
             g.drawString("You Won!", 260, 300);
